@@ -18,7 +18,7 @@ export class ProjectComponent implements OnInit {
     private _router : Router
   ) {
     this.route.queryParamMap.subscribe((params) =>
-      console.log(params.get('id'))
+    
     );
   }
   @Input() details: any;
@@ -27,7 +27,7 @@ export class ProjectComponent implements OnInit {
   ngOnInit(): void {
     this._projectService.getJsonData().subscribe((data) => {
       this.comments = data;
-      console.log('Coments', this.comments);
+     
     });
   }
 

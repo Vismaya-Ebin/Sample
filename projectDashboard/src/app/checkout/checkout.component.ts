@@ -40,7 +40,7 @@ export class CheckoutComponent implements OnInit {
     this.getNameOfTheComonent();
     // Take array length and value
     const arryDetails = this.checkoutForm.get('items').value;
-    console.log(`Extracting Array Details`, arryDetails);
+   
     // throw new Error('Method not implemented.');
     // Setting form Value using setValue()
     // If we are using setVAlue all form fields should be given
@@ -68,10 +68,10 @@ export class CheckoutComponent implements OnInit {
 
     // to capture entire form changes
     this.checkoutForm.valueChanges.subscribe((formValues) => {
-      console.log(`Form Data`, formValues);
+     
     });
     this.checkoutForm.statusChanges.subscribe((status) => {
-      console.log(` status Form Data`, status);
+      
       this.formStatus = status;
       if (this.formStatus === 'VALID') {
         this.is_disable = true;
@@ -82,7 +82,7 @@ export class CheckoutComponent implements OnInit {
   }
 
   postData() {
-    console.log(`Dataaaaa`, this.checkoutForm.value);
+   
   }
   resetForm() {
     this.checkoutForm.get('items').reset();
@@ -115,7 +115,7 @@ export class CheckoutComponent implements OnInit {
     let locNames = this.commonService.getLocation();
     if(locNames){
       alert(`Got true from get`);
-      console.log(`Vismaya`,locNames);
+     
     }
   }
 }

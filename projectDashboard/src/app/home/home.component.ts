@@ -33,8 +33,7 @@ show;
     })
    }
   ngOnChanges(changes: SimpleChanges): void {
-    console.log(`ngOnChanges Triggered`, changes);
-    console.log(changes);
+  
 
     throw new Error('Method not implemented.');
   }
@@ -46,10 +45,10 @@ show;
     const filterArray = this.sampleArray.filter(data => data.project !== data[0]['project'])
   }
   clicked(){
-    console.log('clicked');
+  
   }
   checkBox(data){
-    console.log("DAta",data);
+    
     this.contactService.isChecked.next('Helloooo');
   }
   clearAll(){
@@ -59,17 +58,16 @@ show;
   addTask(){
     this.project.push(this.projectDetails);
     this.numOfItems = this.project.length;
-    console.log('After adding ', this.numOfItems );
+   
   }
   removeItem(i){
 
     const copyArray = [...this.project];
-    console.log('Copy of Array before removing----->', copyArray);
+   
     copyArray.splice(i, 1);
-    console.log('Copy of Array After removing----->', copyArray);
+   
     this.numOfItems = copyArray.length;
-    console.log('Number to be displayed on top', this.numOfItems);
-    console.log('After removing ', this.numOfItems );
+   
     this.project = copyArray;
   }
   getNameOfTheComonent(){

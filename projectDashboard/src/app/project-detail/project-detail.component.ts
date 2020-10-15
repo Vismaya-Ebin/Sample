@@ -28,12 +28,12 @@ export class ProjectDetailComponent implements OnInit {
   constructor(private service: ProjectService,
               private cs: ContactService) {
       this.cs.isChecked.subscribe(data => {
-        console.log("DAta",data);
+       
         this.show = data;
        });
    }
    updateAllComplete(onChange){
-     console.log(`Change triggered`, onChange.checked);
+     
    }
   ngOnInit(): void {
    this.projectDetails = this.service.fetchProjectData();

@@ -13,7 +13,7 @@ export class LoggingInterceptor implements HttpInterceptor {
   constructor() {}
 
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
-   // console.log(`My birtday coming`, request);
+  
     return next.handle(request);
   }
 }

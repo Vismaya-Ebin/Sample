@@ -15,9 +15,9 @@ export class TemplateDrivenFormsComponent implements OnInit {
 
       }
   submit(formDetails){
-    console.log(`Form Details`, formDetails.value);
+   
     this.formArray.push(formDetails.value);
-    console.log('Array of Password', this.formArray);
+    
   }
 
 }

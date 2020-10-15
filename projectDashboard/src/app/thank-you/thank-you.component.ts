@@ -35,7 +35,7 @@ export class ThankYouComponent implements OnInit, OnChanges {
   ngOnInit(): void {
     // throw new Error('Method not implemented.');
     this.contactService.getContacts().subscribe(data => {
-      console.log('Data.....', data);
+    
       this.contactList = data;
     });
   }
@@ -43,11 +43,11 @@ export class ThankYouComponent implements OnInit, OnChanges {
   // tslint:disable-next-line: no-trailing-whitespace
   
   addNewContact(){
-    console.log(`Data from user fields`, this.contactForm.value);
+  
     const reqData = {id: this.contactForm.value.id, name: this.contactForm.value.name, phone: this.contactForm.value.phone };
     this.contactService.postContact(reqData).subscribe(data => {
     this.showMsg = true;
-    console.log('Final Data', data);
+  
     });
   }
 
@@ -55,13 +55,13 @@ export class ThankYouComponent implements OnInit, OnChanges {
   editContact(id){
     const reqData = {id, name: 'Vismaya Ebin', phone: 1010101010100 };
     this.contactService.updateContact(id, reqData).subscribe(data => {
-      console.log(`Updated Data`, data);
+    
     });
   }
 
   getContact(){
     this.contactService.getConyactById().subscribe(data => {
-      console.log(`Data---------->`, data);
+     
     });
   }
 }

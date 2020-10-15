@@ -20,17 +20,16 @@ export class TemplateFormsComponent implements OnInit {
   ngOnInit(): void {}
 
   onCheckboxChange(data){
-    console.log(`${data.fruitsArray}`);
-  }
+    }
   // tslint:disable-next-line: typedef
   onSubmit(form) {
-    console.log(`on submit for events`, form);
+   
     this.emailObj.push(form);
-    console.log('Array of Object', this.emailObj);
+   
   }
   // tslint:disable-next-line: typedef
   submitted(s) {
-    console.log('Submit--->', s);
+    
   }
 
   onCheckBoxChange(){

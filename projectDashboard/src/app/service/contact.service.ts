@@ -30,7 +30,7 @@ export class ContactService {
 
     const getAuthToken = httpHeaders.get('Authorization');
     if (getAuthToken) {
-    console.log(`Http Header`, getAuthToken);
+    
     }
     return this.httpClient.get(postUrl, {headers: httpHeaders});
   }

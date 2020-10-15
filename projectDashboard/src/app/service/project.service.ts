@@ -32,7 +32,7 @@ fetchProjectData(){
     }]; }
 
 getJsonData(): Observable<Ipost[]>{
-  console.log(`12345`, this.http.get(this.data));
+ 
   return this.http.get<Ipost[]>(this.data);
 }
 }

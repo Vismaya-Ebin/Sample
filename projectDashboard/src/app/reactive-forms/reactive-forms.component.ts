@@ -30,7 +30,7 @@ export class ReactiveFormsComponent implements OnInit {
   }
   onSubmit(){
     alert('Submitted');
-    console.log(this.profileForm.value);
+  
   }
 }
   // https://www.youtube.com/watch?v=IwHFnTDu4Nc

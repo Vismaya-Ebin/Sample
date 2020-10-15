@@ -32,7 +32,7 @@ export class AppComponent  implements OnInit{
 
 //  @HostListener('window:keyup', ['$event'])
 //   keyEvent(event: KeyboardEvent) {
-//     console.log(`EVENTS`, event);
+//   
 //     console.log(`Router Events`, this._router);
 
 //     if (parseInt(event.key) === Constants.ZERO) {
