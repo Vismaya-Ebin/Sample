@@ -1,0 +1,27 @@
+
+<app-template-driven-forms></app-template-driven-forms>
+
+<button (click)="thankYou()">Navigate to home</button>
+<ng-container *ngIf="show">
+
+    <p>project works!</p>
+
+<table>
+    <tbody>
+        <thead>
+            <td>Id</td>
+            <td>Post Id</td>
+            <td>Name</td>
+            <td>Email</td>
+        </thead>
+        <tr *ngFor ="let i of comments">
+            <td>{{i.id}}</td>
+            <td>{{i.postId}}</td>
+            <td>{{i.name}}</td>
+            <td>{{i.email}}</td>
+          
+        </tr>
+    </tbody>
+    </table>
+
+</ng-container>

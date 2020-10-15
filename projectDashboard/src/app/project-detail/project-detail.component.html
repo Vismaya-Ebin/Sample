@@ -1,0 +1,46 @@
+<p>project-detail works!</p>
+<div class='checkbox-style'>
+<mat-slider min="1" max="100" step="1" value="1"></mat-slider>
+
+<mat-checkbox (change)="updateAllComplete($event)" 
+             [(checked)]="IsChecked"
+             color=primary>Angular Checkbox Checked</mat-checkbox>
+
+<mat-checkbox  disableRipple=true indeterminate=“true”>Checkbox Indeterminate</mat-checkbox>
+</div>
+<div>{{show}}</div>
+<!-- <li class="glyphicon" 
+[class.glyphicon-star-empty]="!isFav"
+[class.glyphicon-star]="isFav"
+(click)="iconClicked()"></li> -->
+<ul>
+    <li *ngFor="let subtask of task.subtasks">
+      <mat-checkbox [(ngModel)]="subtask.completed"
+                    [color]="subtask.color"
+                    (ngModelChange)="updateAllComplete()">
+        {{subtask.name}}
+      </mat-checkbox>
+    </li>
+  </ul>
+
+<ng-container>
+    <table>
+        <tbody>
+            <thead>
+                <td>Id</td>
+                <td>Post Id</td>
+                <td>Name</td>
+                <td>Email</td>
+            </thead>
+            <tr *ngFor="let i of projectDetails">
+                <td>{{i.id}}</td>
+                <td>{{i.postId}}</td>
+                <td>{{i.name}}</td>
+                <td>{{i.email}}</td>
+
+            </tr>
+        </tbody>
+    </table>
+
+
+</ng-container>

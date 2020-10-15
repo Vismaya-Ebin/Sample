@@ -1,0 +1,21 @@
+
+<!-- <div>
+<h3>Template Form</h3>
+<form #f="ngForm" (ngSubmit)="onSubmit(f.value)">
+<label>Email :</label><input type="text" name="email" ngModel /><br>
+<label>Password:</label><input type="password" name="password" ngModel /><br>
+    <button type="submit" click=submitted(name)>Submit</button>
+</div> -->
+
+
+<!-- <form [formGroup]="form" (ngSubmit)="submitForm()" novalidate> -->
+    <div *ngFor="let data of fruitsArray; let i = index">
+        <!-- {{data}} {{i}} -->
+    </div>
+    <input type="checkbox" value="data" (change)="onCheckboxChange($event)"/>
+    <input type="submit" value ="Submit">
+
+    <li *ngFor="let item of checkboxesDataList">
+        <input type="checkbox" [(ngModel)]="item.isChecked" (change)="changeSelection()">{{item.label}}
+      </li>
+<!-- </form> -->

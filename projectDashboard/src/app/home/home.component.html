@@ -1,0 +1,35 @@
+<div class="container color-dark">
+    <div class=col>
+        <p>Add To Task</p>
+    </div>
+    <div class=col>
+        <p>To Do List <span>{{numOfItems}}</span></p>
+        <button (click)="clearAll()">Clear the list</button>
+    </div>
+   {{show}}
+     <mat-checkbox #ch (change)="checkBox(ch)">Check me</mat-checkbox>
+     <button (click)="clicked()" (keup.enter)="one($event)">EDIT</button>
+     <button (click)="clicked()" (keup.enter)="one($event)">FOLLOW</button>
+     <button  (click)="clicked()" (keup.enter)="one($event)">REMOVE</button>
+</div>
+<h1>{{locName}}</h1>
+<div class="container color-light">
+    <div class=col>
+        <h3 class="heading">Add and Remove your ToDo's</h3>
+        <form>
+            <input type="text" placeholder="Add the tech stack details" #data [(ngModel)]="projectDetails" class="text"
+                name="project-name" /><br>
+            <span class="textStyle">{{projectDetails}}</span><br>
+            <input type="submit" (click)="addTask()" value="Add Task" class="btn" />
+        </form>
+    </div>
+    <div class="col">
+        <p class="pro-list" *ngFor="let details of project; let i = index" (click)="removeItem(i)">{{details}}</p>
+
+
+    </div>
+    <ng-container *ngIf="showDetails">
+        <app-project [details]='sampleArray' [show]='showDetails'></app-project>
+    </ng-container>
+    
+</div>

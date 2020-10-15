@@ -1,0 +1,35 @@
+<!-- <ul>
+  <li><a routerLink="">Home</a></li>
+  <li><a routerLink="Projects">Projects</a></li>
+</ul> -->
+<!-- <p>{{title}}</p> -->
+
+<ul>
+  <li><a routerLink="home" routerLinkActive="Active" [routerLinkActiveOptions]="{exact:true}">
+      Home</a></li>
+  <li><a routerLink="checkout" routerLinkActive="Active" [routerLinkActiveOptions]="{exact:true}"> Checkout</a></li>
+  <li><a routerLink="project" [queryParams]="{id:1}" routerLinkActive="Active"
+      [routerLinkActiveOptions]="{exact:true}">Projects</a></li>
+  <li><a routerLink="projectDetail" routerLinkActive="Active" [routerLinkActiveOptions]="{exact:true}">Project
+      Details</a></li>
+  <li><a routerLink="familyDetails" routerLinkActive="Active" [routerLinkActiveOptions]="{exact:true}">Family
+      Details</a></li>
+  <li><a routerLink="reactForms" routerLinkActive="Active" [routerLinkActiveOptions]="{exact:true}">React Forms</a>
+  </li>
+  <li><a routerLink="templateForms" routerLinkActive="Active" [routerLinkActiveOptions]="{exact:true}">Template
+      Forms</a></li>
+
+  <li><a routerLink="orders" routerLinkActive="Active" [routerLinkActiveOptions]="{exact:true}">Orders</a></li>
+  <li><a routerLink="tasks" routerLinkActive="Active" [routerLinkActiveOptions]="{exact:true}">Task</a></li>
+  <li><a routerLink="todos" routerLinkActive="Active" [routerLinkActiveOptions]="{exact:true}">Todos</a></li>
+  <li><a routerLink="thankComp" routerLinkActive="Active" [routerLinkActiveOptions]="{exact:true}">
+      Contacts</a></li>
+</ul>
+
+<!-- <div class= "container">
+<a routerLink="">Home</a>
+<a routerLink="">Project</a>
+</div> -->
+
+
+<router-outlet></router-outlet>

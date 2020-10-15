@@ -1,0 +1,39 @@
+<div *ngIf="showMsg;else errorMsg" class="green">
+   Data Saved Successfully
+</div>
+<div>
+
+    <ul>
+        <li *ngFor = "let i of contactList">
+            <!-- {{i.name}}
+            {{i.phone}} -->
+            {{i.id}}
+            {{i.title}}
+           
+        </li>
+    </ul>
+</div>
+<ng-template #errorMsg class="red">Internal Server error</ng-template>
+<form [formGroup]="contactForm" (ngSubmit)="addNewContact" class="formDetails">
+
+    <label>
+        ID:
+        <input type="number" class="form-control" formControlName="id">
+    </label>
+       
+    <label>
+         Name:
+        <input type="text"  class="form-control" formControlName="name">
+    </label>
+          
+    <label>
+        Phone :
+        <input type="number"  class="form-control" formControlName="phone">
+    </label>
+     
+    <button (click)="addNewContact()" class="btn btn-primary">Create New Contact</button>
+    <button (click)="editContact(10)" class="btn btn-primary">Edit Contact</button>
+   
+</form>
+
+<button (click)="getContact()" class="btn btn-primary"> Params</button>

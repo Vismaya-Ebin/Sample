@@ -1,0 +1,66 @@
+<h1>Login Form</h1>
+<!--<form>
+email: <input type ="mail" [formControl] ="email"/><br/>
+password: <input type ="password" [formControl] ="pwd"/> 
+{{email.value}}
+{{pwd.value}} 
+ <form FormGroup="profile">
+    <label>Name :
+        <input type="text" formControlName="name" />
+    </label>
+    <label>Age :
+        <input type="text" formControlName="age" />
+    </label>
+    <div formGroup="address">
+        <label>City :
+            <input type="text" formControlName="city" />
+        </label>
+        <label>Country :
+            <input type="text" formControlName="country" />
+        </label>
+
+        <label>Street :
+            <input type="text" formControlName="street" />
+        </label>
+    </div> 
+{{email.status}} 
+</form> -->
+<!-- <button (click)="update()">Update To Specific Address</button> -->
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit" class="formDetails">
+
+    <label>
+        First Name:
+        <input type="text" formControlName="firstName">
+    </label>
+    <br> <br> <br> 
+    <label>
+        Last Name:
+        <input type="text" formControlName="lastName">
+    </label>
+    <br>  <br>  <br>  
+    <div formGroupName="address">
+        <h3>Address</h3>
+
+        <label>
+            Street:
+            <input type="text" formControlName="street">
+        </label>
+        <br>  <br>  <br>  
+        <label>
+            City:
+            <input type="text" formControlName="city">
+        </label>
+        <br>  <br>  <br>  
+        <label>
+            State:
+            <input type="text" formControlName="state">
+        </label>
+        <br>  <br>  <br>  
+        <label>
+            Zip Code:
+            <input type="text" formControlName="zip">
+        </label>
+        <br>  <br>  <br> 
+    </div>
+    <button type="submit" (click)='onSubmit()' [disabled]="!profileForm.valid">Submit</button> 
+</form>
